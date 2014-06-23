@@ -1,2 +1,5 @@
 Click here to 
-<%= link_to 'forum', "http://lvh.me:3000?sso=#{@sso}", target: '_blank'%>
+
+<% @cateogries.each do |category|%>
+	<%= link_to category[0], "http://nfhsforum.weboapps.com/category/#{category[1]}?sso=#{@sso}", target: '_blank'%>
+<%end%>
